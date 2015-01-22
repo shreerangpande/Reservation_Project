@@ -1,0 +1,20 @@
+<h1>Listing Reservations</h1>
+ 
+<table>
+  <tr>
+    <th>Location</th>
+    <th>Pickup Time</th>
+    <th>Dropoff Time</th>
+  </tr>
+ 
+  <%= if @reservation!=nil
+    @reservation.each do |reservation| %>
+    <tr>
+      <td><%= reservation.pickup_location %></td>
+      <td><%= reservation.pickup_time %></td>
+      <td><%= reservation.dropoff_time %></td>
+    </tr>
+  <% end
+  end %>
+</table>
+<%= link_to 'New Reservation', new_reservation_path %>

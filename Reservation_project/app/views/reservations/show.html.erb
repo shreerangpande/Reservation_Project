@@ -1,0 +1,19 @@
+<p>
+	<strong>Pickup Location</strong>
+	<%= if @reservation!=nil
+		@reservation.pickup_location
+		end %>
+</p>
+<p>
+	<strong>Pickup Time</strong>
+	<%= if @reservation!=nil
+		@reservation.pickup_time
+		end %>
+</p>
+<p>
+	<strong>Dropoff Time</strong>
+	<%= if @reservation!=nil
+		@reservation.dropoff_time
+		end %>
+</p>
+<%= link_to 'Back', reservations_path %>
